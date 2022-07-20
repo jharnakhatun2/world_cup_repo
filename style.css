@@ -4,10 +4,11 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-/*----------------------------
-    Banner Section
-----------------------------*/
+/*-----------------------------------
+            Banner Section
+-------------------------------------*/
 .container{
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 130px;
@@ -33,6 +34,9 @@ body{
     font-size: 59px;
     line-height: 71px;
     margin-bottom: 22px;
+}
+.ellipsis{
+    display:none;
 }
 .banner-text{
     font-size: 14px;
@@ -63,9 +67,9 @@ body{
     height: auto;
   }
 
-/*----------------------------
-    Match Blog Section
-----------------------------*/
+/*---------------------------------------
+            Match Blog Section
+-----------------------------------------*/
 /*--Selective menu--*/
 .match-blogs{
     display: grid;
@@ -113,7 +117,7 @@ body{
     font-weight: 500; 
 }
 
-/*-------Blog-------*/
+/*---------------Blog-----------*/
 .blogs{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -147,9 +151,9 @@ body{
     margin-left: 25px;
 }
 
-/*-------------------------
-    Upcomming Match
--------------------------*/
+/*-------------------------------------
+           Upcomming Match
+--------------------------------------*/
 
 .upcomming-match-select:nth-child(1){
     background-color: #DD0000;
@@ -180,9 +184,9 @@ body{
     font-size: 15px;
 }
 
-/*----------------------------
-          Footer
-----------------------------*/
+/*-------------------------------------
+                Footer
+--------------------------------------*/
 .goal-footer{
     width: 100%;
     height: 325px;
@@ -225,4 +229,78 @@ hr{
     color: #b9b9b9;
 }
 
+/************************************
+        Media Queries
+************************************/
+
+/*---------Mobile Device--------*/
+@media only screen and (max-width: 688px){
+    .container {
+        margin-bottom: 29px;
+    }
+    .banner{
+        width: 90%;
+        flex-direction: column;
+    }
+    .banner-content{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center
+    }
+    .banner-title {
+        font-size: 42px;
+        line-height: 52px;
+        text-align: center;
+    }
+    .banner-text {
+        display:none;
+    }
+    .ellipsis{
+        display: block;
+        text-align: center;
+        width: 80%;
+    }
+    .overflow{
+        color: #fff;
+        font-size: 18px;
+
+    }
+    .banner-button {
+        margin-top: 32px;
+    }
+    .banner-image {
+        width: 90%;
+        height: 448px;
+    }
+    .match-blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .match-menu, .upcomming-match-menu {
+        background-color: #fffcfc;
+        margin-left: 20%;
+    }
+    .match-select, .upcomming-match-select{
+        border: 1px solid #e7e3e3;
+    }
+    .match-blog-img img {
+        width: 100%;
+    }
+    .goal-footer {
+        height: auto;
+    }
+    .footer-bottom {
+        width: 88%;
+        flex-direction: column;
+    }
+    .page {
+        display: block;
+        text-align: center;
+        line-height: 31px;
+        margin-left: 0;
+    }
+    
+}
 
